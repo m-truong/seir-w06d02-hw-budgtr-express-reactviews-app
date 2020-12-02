@@ -10,6 +10,9 @@ class Layout extends React.Component {
                 </head>
                 <body>
                     <h1>Budgtr App</h1>
+                    <a href="/budgets">Home</a>
+                    <br/>
+                    <a href="/budgets/new">Create a new budget</a>
                     {this.props.children}
                 </body>
             </html>

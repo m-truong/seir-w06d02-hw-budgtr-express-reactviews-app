@@ -6,7 +6,7 @@ class Show extends React.Component {
     const budget = this.props.budget;
     return (
       <Layout>
-        <a href="/budgets">Home</a>
+        
         <h1>{budget.name}</h1>
         <ul>
           <li>{budget.date}</li> 

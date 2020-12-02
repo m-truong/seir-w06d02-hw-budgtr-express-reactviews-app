@@ -37,6 +37,20 @@ app.get('/budgets', (req, res) => {
     })
 })
 
+// NEW route 
+app.get('/budgets/new', (req, res) => {
+    // displays HTML form to user
+    res.render('New')
+})
+
+// CREATE/POST-route
+app.post("/budgets", (req, res) => {
+    // push the data
+    budgetData.push(req.body)
+    // redirect to Index.jsx
+    res.redirect("/budgets")
+})
+
 // SHOW-route single resource
 app.get("/budgets/:indexOfBudgetsArray", (req, res) => {
     // pass this.props 
