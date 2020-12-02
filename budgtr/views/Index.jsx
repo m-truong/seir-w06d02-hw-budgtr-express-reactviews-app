@@ -3,16 +3,18 @@ const Layout = require("./components/Layout.jsx");
 
 class Index extends React.Component {
   render() {
+      const budgetsArr = this.props.budgetsArr
     return (
       <Layout>
         <div>
-          <table style="width:100%">
-            {this.props.budgetData.map((budget, index) => {
+          <table>
+            {budgetsArr.map((currBudget, index) => {
               return (
                 <tr>
-                  <td>Jill</td>
-                  <td>Smith</td>
-                  <td>50</td>
+                  <td>{currBudget.date}</td>
+                  <td>{currBudget.name}</td>
+                  <td>{currBudget.from}</td>
+                  <td>{currBudget.amount}</td>
                 </tr>
               );
             })}

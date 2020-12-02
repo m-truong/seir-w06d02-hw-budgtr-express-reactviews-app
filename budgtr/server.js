@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
     // renders Index-JSX template
         // send this.props
     res.render('Index', {
-        budgetData = budgetData
+        budgetsArr: budgetData
     })
 })
 
