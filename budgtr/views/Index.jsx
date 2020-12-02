@@ -8,11 +8,13 @@ class Index extends React.Component {
       <Layout>
         <div>
           <table>
+              {/* appends each <tr> dynamically to the <table> */}
             {budgetsArr.map((currBudget, index) => {
               return (
                 <tr>
                   <td>{currBudget.date}</td>
-                  <td>{currBudget.name}</td>
+                  {/* dynamically assigning index */}
+                  <td><a href={`/budgets/${index}`}>{currBudget.name}</a></td>
                   <td>{currBudget.from}</td>
                   <td>{currBudget.amount}</td>
                 </tr>

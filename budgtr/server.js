@@ -29,7 +29,7 @@ const budgetData = require('./models/budget.js')
 // order of INDUCES important 
 
 // INDEX-route
-app.get('/', (req, res) => {
+app.get('/budgets', (req, res) => {
     // renders Index-JSX template
         // send this.props
     res.render('Index', {
@@ -37,6 +37,14 @@ app.get('/', (req, res) => {
     })
 })
 
+// SHOW-route single resource
+app.get("/budgets/:indexOfBudgetsArray", (req, res) => {
+    // pass this.props 
+    res.render("Show", {
+        // show single budget
+        budget: budgetData[req.params.indexOfBudgetsArray]
+    })
+})
 
 // =======================================
 //              LISTENER
