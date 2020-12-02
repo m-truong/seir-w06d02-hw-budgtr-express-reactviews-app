@@ -6,7 +6,7 @@ class New extends React.Component {
     return (
       <Layout>
         <h1>Create a New Budget Here</h1>
-        {/* action=""directs data to the action-route method="POST" http-verb*/}
+        {/* action="" directs data to the action-route method="POST" http-verb*/}
         {/* post and /fruits */}
         <form action="/budgets" method="POST">
           {/* name-attr identifies data key-value ; it's actually the 'key' associated with the input-data! */}
